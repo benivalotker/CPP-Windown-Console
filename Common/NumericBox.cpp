@@ -3,8 +3,14 @@
 
 using namespace std;
 
-NumericBox::NumericBox(Border * _border, short _left, short _top) : Control(_left, _top, _border) , value(0) , width(17)
+NumericBox::NumericBox(Border * _border, short _left, short _top) : Control(_left, _top, _border) , value(0) , width(17), focus(FALSE)
 {
+
+}
+
+void NumericBox::onFocus(bool flag)
+{
+	focus = flag;
 
 }
 
@@ -38,6 +44,10 @@ void NumericBox::draw(Graphics& g, int x, int y, size_t z)
 	}
 	cout << '\xD9';
 	g.write(x + 6, y + 1, to_string(value));
+
+	if (focus) {
+		g.write("_");
+	}
 }
 
 void NumericBox::mousePressed(int x, int y, bool isLeft)
@@ -59,6 +69,33 @@ void NumericBox::mousePressed(int x, int y, bool isLeft)
 			--value;
 		}
 		
+	}
+}
+
+void NumericBox::keyDown(int keyCode, char charecter, Graphics & g)
+{
+	switch (keyCode)
+	{
+	case VK_DELETE:
+		value = 0;
+		break;	
+	case VK_LEFT:
+		value++;
+		break;
+	case VK_NUMPAD4:
+		value++;
+	case VK_RIGHT:
+		if (value == 0) {
+			break;
+		}
+		value--;
+		break;
+	case VK_NUMPAD6:
+		if (value == 0) {
+			break;
+		}
+		value--;
+		break;
 	}
 }
 

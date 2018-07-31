@@ -16,7 +16,7 @@ private:
 
 
 public:
-	
+
 	TextBox();
 	TextBox(Border *_border, short _left, short _top, int _width, int _height);
 	~TextBox();

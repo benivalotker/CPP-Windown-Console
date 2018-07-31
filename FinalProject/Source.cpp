@@ -27,11 +27,12 @@ int main(int argc, char** argv)
 	//radio list
 	RadioList rb(new LineBorder(), 75, 2, { "Radio  Box 1" , "Radio  Box 2"  , "Radio  Box 3" ,  "Radio  Box 4" });
 
+	//comboBox
 	ComboBox cob(new LineBorder(), 50, 17, { "Combobox 1" , "Combobox 2"  , "Combobox 3" ,  "Combobox 4" });
 
-
+	//panel
 	Panel p(new LineBorder(), 1, 1);
-	
+
 	p.setWidth(100);
 	p.setHeight(30);
 
@@ -44,14 +45,11 @@ int main(int argc, char** argv)
 	TextBox textBox1(new LineBorder(), 23, 20, 20, 4);
 
 	//massageBox
-	MassageBox mb(35, 8, "Massage Box");
+	MassageBox mb(37, 8, "Massage Box");
 	
 	//button
 	Button b(new LineBorder(), 2, 23, "button");
 	Button b2(new LineBorder(), 23, 23, "Submit");
-
-	//ComboBox
-	
 
 	//button event
 	b2.setEvent(&mb);

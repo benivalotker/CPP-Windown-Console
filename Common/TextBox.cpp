@@ -7,7 +7,7 @@ using namespace std;
 
 TextBox::TextBox() {}
 
-TextBox::TextBox(Border *_border, short _left, short _top, int _width, int _height) : Control(_left, _top, _border), width(_width), height(_height), cursor(0), focus(FALSE), value()		
+TextBox::TextBox(Border *_border, short _left, short _top, int _width, int _height) : Control(_left, _top, _border), width(_width), height(_height), cursor(0), focus(FALSE), value()
 {
 }
 
@@ -24,9 +24,9 @@ void TextBox::draw(Graphics & g, int x, int y, size_t z)
 
 	if (focus)
 	{
-		
+
 		this->border->drawBorder(g, x, y, this->width, this->height);
-		g.write(x + 1, y + 1 , value);
+		g.write(x + 1, y + 1, value);
 		g.moveTo(cursor + (left + 1), top + 1);
 		g.setCursorVisibility(TRUE);
 		g.write("_");
@@ -37,7 +37,7 @@ void TextBox::draw(Graphics & g, int x, int y, size_t z)
 		g.setCursorVisibility(FALSE);
 		g.write(x + 1, y + 1, value);
 	}
-	
+
 }
 
 void TextBox::keyDown(int keyCode, char charecter, Graphics & g)
@@ -90,7 +90,7 @@ void TextBox::keyDown(int keyCode, char charecter, Graphics & g)
 			if (cursor > 0)
 			{
 				--cursor;
-			}	
+			}
 			break;
 		case VK_NUMPAD4:
 			if (cursor > 0)
@@ -112,13 +112,13 @@ void TextBox::keyDown(int keyCode, char charecter, Graphics & g)
 		}
 	}
 }
-	
+
 
 void TextBox::mousePressed(int x, int y, bool isLeft)
 {
 	int stringSize = static_cast<int>(value.size());
 
-	if (y == top  && (x > left && x < (left + width - 1)))
+	if (y == top && (x > left && x < (left + width - 1)))
 	{
 		if (x > stringSize)
 		{

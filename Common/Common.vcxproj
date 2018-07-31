@@ -116,6 +116,7 @@
     <ClCompile Include="CheckList.cpp" />
     <ClCompile Include="ComboBox.cpp" />
     <ClCompile Include="Control.cpp" />
+    <ClCompile Include="DoubleBorder.cpp" />
     <ClCompile Include="EventEngine.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Label.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="CheckList.h" />
     <ClInclude Include="ComboBox.h" />
     <ClInclude Include="Control.h" />
+    <ClInclude Include="DoubleBorder.h" />
     <ClInclude Include="EventEngine.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Label.h" />

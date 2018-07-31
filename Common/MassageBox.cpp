@@ -1,7 +1,7 @@
 #include "MassageBox.h"
 
 MassageBox::MassageBox(short _left, short _top, string labelString) :
-	Control(_left, _top), l(left + 8, _top, labelString), p(new LineBorder(), _left, _top), submit(new LineBorder(), _left + 3, _top + 5, "Submit"), cancel(new LineBorder(), _left + 18, _top + 5, "Cancel")
+	Control(_left, _top), l(left + 8, _top, labelString), p(new LineBorder(), _left, _top), submit(new LineBorder(), _left + 3, _top + 5, "Submit"), cancel(new LineBorder(), _left + 18, _top + 5, "Cancel"), focus(FALSE)
 {
 
 }

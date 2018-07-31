@@ -8,6 +8,7 @@
 #include "../Common/TextBox.h"
 #include "../Common/RadioList.h"
 #include "../Common/MassageBox.h"
+#include "../Common/ComboBox.h"
 #include <iostream>
 
 using namespace std;
@@ -44,6 +45,10 @@ int main(int argc, char** argv)
 	Button b(new LineBorder(), 2, 23, "button");
 	Button b2(new LineBorder(), 23, 23, "Submit");
 
+	//ComboBox
+	vector < string > val = { "combo1", "combo2", "combo3", "combo5" };
+	ComboBox comBox(new LineBorder(), 60, 17, 15, 10, val);
+
 	//button event
 	b2.setEvent(&mb);
 	
@@ -57,6 +62,7 @@ int main(int argc, char** argv)
 	p.addControlsToVector(&b);
 	p.addControlsToVector(&b2);
 	p.addControlsToVector(&mb);
+	p.addControlsToVector(&comBox);
 
 
 	Control* firstFocus;

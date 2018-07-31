@@ -13,28 +13,31 @@ void DoubleBorder::drawBorder(Graphics & g, short left, short top, int width, in
 
 	g.moveTo(leftBorder, topBorder);
 
-	cout << '\xDA';
+	cout << '\xC9';
 	for (int i = 0; i < width - 2; i++) {
-		cout << '\xC4';
+		cout << '\xCD';
 	}
-	cout << '\xBF';
+	cout << '\xBB';									//top right corner
 	g.moveTo(leftBorder, topBorder + 1);
 	int tempX = topBorder + 1;
 	for (int i = 0; i < height - 2; i++) {
-		cout << '\xB1';
+		cout << '\xBA';										//left
 		for (int y = 0; y < width - 2; y++) {
 			cout << ' ';
 		}
-		cout << '\xB1';
+		cout << '\xBA';										//right
 		g.moveTo(leftBorder, tempX++);
 	}
 	g.moveTo(leftBorder, topBorder + height - 2);
-	cout << '\xC0';
+	cout << '\xC8';						//right buttom corner
 	g.moveTo(leftBorder + 1, topBorder + height - 2);
 	for (int i = 0; i < width - 2; i++) {
-		cout << '\xC4';
+		cout << '\xCD';					//buttom line
 	}
-	cout << '\xD9';
+	cout << '\xBC';						//right buttom corner
+
+
+	
 }
 
 DoubleBorder::~DoubleBorder()

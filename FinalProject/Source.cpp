@@ -42,13 +42,13 @@ int main(int argc, char** argv)
 
 	//TextBox
 	TextBox textBox(new LineBorder(), 2, 20, 20, 4);
-	TextBox textBox1(new LineBorder(), 23, 20, 20, 4);
+	TextBox textBox1(new DoubleBorder(), 23, 20, 20, 4);
 
 	//massageBox
 	MassageBox mb(37, 8, "Massage Box");
 	
 	//button
-	Button b(new LineBorder(), 2, 23, "button");
+	Button b(new DoubleBorder(), 2, 23, "button");
 	Button b2(new LineBorder(), 23, 23, "Submit");
 
 	//button event

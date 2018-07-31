@@ -1,6 +1,7 @@
 #pragma once
 #include "Graphics.h"
 #include "LineBorder.h"
+#include "DoubleBorder.h"
 #include <vector>
 
 using namespace std;

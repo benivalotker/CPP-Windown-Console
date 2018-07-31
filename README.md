@@ -10,7 +10,7 @@ You can find in the program implementation of 10 basic control implemented in cp
 
 1- Label - Simple label cpp implementation 
 
-<img src="" alt="Label">
+<img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/label.PNG" alt="Label">
 
 2- Buttom - Simple button cpp implemention that represent a real button in a form with onClick event
 
@@ -38,8 +38,7 @@ You can find in the program implementation of 10 basic control implemented in cp
 
 7- Panel - Simple implementation of cpp Panel that as a vector of controls --> Its the Father Control
 
-<img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/radio.PNG" alt="Radio Button">
-
+<img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/panel.PNG" alt="panel">
 
 8- Message Box - Simple cpp implementation of Poppup.
 

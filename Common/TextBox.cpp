@@ -10,11 +10,12 @@ TextBox::TextBox() {}
 TextBox::TextBox(Border *_border, short _left, short _top, int _width, int _height) : Control(_left, _top, _border), width(_width), height(_height), cursor(0), focus(FALSE), value()		
 {
 }
-TextBox::~TextBox() {}
+
 
 void TextBox::onFocus(bool flag)
 {
 	focus = flag;
+
 }
 
 
@@ -112,10 +113,6 @@ void TextBox::keyDown(int keyCode, char charecter, Graphics & g)
 }
 	
 
-
-
-
-
 void TextBox::mousePressed(int x, int y, bool isLeft)
 {
 	int stringSize = static_cast<int>(value.size());
@@ -133,4 +130,4 @@ void TextBox::mousePressed(int x, int y, bool isLeft)
 	}
 }
 
-
+TextBox::~TextBox() {}

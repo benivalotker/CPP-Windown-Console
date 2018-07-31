@@ -46,7 +46,11 @@ void EventEngine::run(Control &c)
 				
 				if (code == VK_TAB)
 				{
-					moveFocus(c, f);
+					if (f->getIsInLastChild())
+					{
+						moveFocus(c, f);
+					}
+
 				}	
 				else
 					f->keyDown(code, chr , _graphics);

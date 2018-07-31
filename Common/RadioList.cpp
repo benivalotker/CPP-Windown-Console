@@ -217,15 +217,6 @@ bool RadioList::getIsInLastChild()
 void RadioList::onFocus(bool flag)
 {
 	focus = flag;
-	if (focus)
-	{
-		radioBoxs[0]->flipBgToWhite();
-	}
-	else
-	{
-		radioBoxs[currentCboxIndex]->flipBgToBlack();
-	}
-	
 }
 
 

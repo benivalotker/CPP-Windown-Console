@@ -34,22 +34,18 @@ public:
 	{
 		if(focusCtl != NULL)
 		{	
-			if (focusCtl->isListObj() && control.isListObj())
-			{
-				if (!focusCtl->getIsInLastChild())
-				{
-					return FALSE;
-				}
-			}
-			else if(!control.isListObj())
+			 if(!control.isListObj())
 			{
 				focusCtl->onFocus(FALSE);
 				focusCtl = &control;
 				control.onFocus(TRUE);
 				return TRUE;
 			}
-			focusCtl->onFocus(FALSE);
-		}	
+			 focusCtl->onFocus(FALSE);
+			 focusCtl = &control;
+			 control.onFocus(TRUE);
+			 return TRUE;
+		}
 		focusCtl = &control;
 		control.onFocus(TRUE);	
 		return TRUE;

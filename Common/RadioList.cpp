@@ -2,7 +2,7 @@
 
 
 
-
+//Constructor
 RadioList::RadioList(Border * _border, short _left, short _top, vector<string> _values) :Control(_left, _top, _border), currentCboxIndex(-1), selectedIndex(0) , lastSelected(-1)
 {
 	for (int i = 0; i < _values.size(); i++) {
@@ -12,6 +12,7 @@ RadioList::RadioList(Border * _border, short _left, short _top, vector<string> _
 	}
 }
 
+//overloads father method
 void RadioList::draw(Graphics & g, int x, int y, size_t z)
 {
 	g.setBackground(bgColor);
@@ -22,17 +23,21 @@ void RadioList::draw(Graphics & g, int x, int y, size_t z)
 	}
 }
 
+//reacts on press mouse
 void RadioList::mousePressed(int x, int y, bool isLeft)
 {
 
 }
 
+//reacts on key down
 void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 {
 	int vectorSize = static_cast<int>(radioBoxs.size());
 	
 	switch (keyCode)
 	{
+
+		//tab pressed
 	case VK_TAB:
 		// if no focused
 		if (++currentCboxIndex == 0)
@@ -55,6 +60,8 @@ void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 			selectedIndex = currentCboxIndex;
 		}
 		break;
+
+		//key down pressed
 	case VK_DOWN:
 		// if no focused
 		if (++currentCboxIndex == 1)
@@ -84,6 +91,8 @@ void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 			selectedIndex = currentCboxIndex;
 		}
 		break;
+
+		//numpad 2 was pressed like key up
 	case VK_NUMPAD2:
 		// if no focused
 		if (++currentCboxIndex == 1)
@@ -113,6 +122,8 @@ void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 			selectedIndex = currentCboxIndex;
 		}
 		break;
+
+		//key up was pressed
 	case VK_UP:
 		// if no focused
 		if (--currentCboxIndex == 0)
@@ -137,6 +148,8 @@ void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 			selectedIndex = currentCboxIndex;
 		}
 		break;
+
+		//numpad8 pressed like key up
 	case VK_NUMPAD8:
 		// if no focused
 		if (--currentCboxIndex == 0)
@@ -161,6 +174,8 @@ void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 			selectedIndex = currentCboxIndex;
 		}
 		break;
+
+		//space was pressed to select current item and check it
 	case VK_SPACE:
 		if (lastSelected == -1)
 		{
@@ -179,6 +194,7 @@ void RadioList::keyDown(int keyCode, char charecter, Graphics & g)
 	}
 }
 
+//return true if selected
 bool RadioList::getIsInLastChild()
 {
 	int vectorSize = static_cast<int>(radioBoxs.size());
@@ -214,6 +230,7 @@ bool RadioList::getIsInLastChild()
 	}
 }
 
+//set focus
 void RadioList::onFocus(bool flag)
 {
 	focus = flag;
@@ -221,7 +238,7 @@ void RadioList::onFocus(bool flag)
 
 
 
-
+//Destructor
 
 RadioList::~RadioList()
 {

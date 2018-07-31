@@ -1,8 +1,8 @@
 # AMA-CONSOLE-PROD
 
-Simple cpp apllication that implements Graphics library.
+Simple cpp application  that implements Graphics library.
 
-Every control enherits from the base class Control.
+Every control inherits from the base class Control.
 
 The user can pass focus over all the controls.
 
@@ -12,7 +12,7 @@ You can find in the program implementation of 10 basic control implemented in cp
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/label.PNG" alt="Label">
 
-2- Buttom - Simple button cpp implemention that represent a real button in a form with onClick event
+2- Button - Simple button cpp implementation that represent a real button in a form with onClick event
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/Button.PNG" alt="Button">
 
@@ -21,12 +21,12 @@ You can find in the program implementation of 10 basic control implemented in cp
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/radio.PNG" alt="Radio Button">
 
 
-4- CheckBox - A Simple implementation of checkBox that can be pushed into a Check list and gives the user possibility to choose few options into of the list.
+4- Checkbox - A Simple implementation of checkbox that can be pushed into a Check list and gives the user possibility to choose few options into of the list.
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/chack.PNG" alt="Chack Box">
 
 
-5 - Numeric box - Simple cpp iplementation of numeric box that represent a number in the center and two button "minus" do decrese the value of the number and "plus" to increase it.
+5 - Numeric box - Simple cpp implementation of numeric box that represent a number in the center and two button "minus" do decrese the value of the number and "plus" to increase it.
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/Numeric%20Box.PNG" alt="Numeric 0Box">
 
@@ -40,12 +40,12 @@ You can find in the program implementation of 10 basic control implemented in cp
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/panel.PNG" alt="panel">
 
-8- Message Box - Simple cpp implementation of Poppup.
+8- Message Box - Simple cpp implementation of Popup.
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/massageBox.PNG" alt="massageBox">
 
 
-9- TextBox - Simple cpp implementation of text Box, Users can enter, delete text into it.
+9- Textbox - Simple cpp implementation of text Box, Users can enter, delete text into it.
 
 <img src="https://github.com/liorshahar/AMA-CONSOLE-PROD/blob/master/images/text.PNG" alt="Text Box">
 

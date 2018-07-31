@@ -3,11 +3,13 @@
 
 using namespace std;
 
+//Constructor
 CheckBox::CheckBox(short _left, short _top, string _value) :Control(_left, _top), value(_value) , isSelected(FALSE) 
 {
 
 }
 
+//Overloading of the father method
 void CheckBox::draw(Graphics & g, int x, int y, size_t z)
 {
 
@@ -40,30 +42,34 @@ void CheckBox::draw(Graphics & g, int x, int y, size_t z)
 	g.write(value);
 }
 
+//reaction to mouse press
 void CheckBox::mousePressed(int x, int y, bool isLeft)
 {
 }
 
 
 
-
+//colors current item to white
 void CheckBox::flipBgToWhite()
 {
 	bgColor = Color::White;
 	fgColor = Color::Black;
 }
 
+//colors current item to black
 void CheckBox::flipBgToBlack()
 {
 	bgColor = Color::Black;
 	fgColor = Color::White;
 }
 
+//returns true if current item is selected
 bool CheckBox::getIsSelected()
 {
 	return isSelected;
 }
 
+//set current item as selected
 void CheckBox::setIsSelected()
 {
 	if (!isSelected)
@@ -76,6 +82,7 @@ void CheckBox::setIsSelected()
 	}
 }
 
+//destructor
 CheckBox::~CheckBox()
 {
 }

@@ -6,6 +6,7 @@ using namespace std;
 
 ComboBox::ComboBox(Border* _border, short _left, short _top, vector<string> _values) :Control(_left, _top, _border), values(_values), width(20), isOpen(FALSE), currentIndex(0)
 {
+	valueToDisplay = _values[0];
 }
 
 
@@ -31,7 +32,7 @@ void ComboBox::draw(Graphics & g, int x, int y, size_t z)
 			cout << ' ';
 		}
 		cout << '\xB3' << '\xF0' << '\xB3';
-		g.write(x + 2, y + 1, values[0]);
+		g.write(x + 2, y + 1, valueToDisplay);
 		g.moveTo(x, y + 2);
 		cout << '\xC0';
 		for (int i = 0; i < 18; i++)
@@ -72,7 +73,7 @@ void ComboBox::draw(Graphics & g, int x, int y, size_t z)
 		{
 			g.setBackground(bgColor);
 			g.setForeground(fgColor);
-			if (y + 1 == currentIndex)
+			if (y == currentIndex)
 			{
 				g.setBackground(Color::White);
 				g.setForeground(Color::Black);
@@ -127,12 +128,12 @@ void ComboBox::mousePressed(int x, int y, bool isLeft)
 		if (!isOpen)
 		{
 			isOpen = !isOpen;
-			currentIndex = 1;
+			currentIndex = 0;
 		}
 		else
 		{
 			isOpen = !isOpen;
-			currentIndex = 1;
+			currentIndex = 0;
 		}
 	}
 }
@@ -146,9 +147,9 @@ void ComboBox::keyDown(int keyCode, char charecter, Graphics & g)
 
 		break;
 	case VK_DOWN:
-		if (currentIndex == vectorSize)
+		if(currentIndex == vectorSize -1)
 		{
-			currentIndex = 1;
+			currentIndex = 0;
 		}
 		else
 		{
@@ -156,7 +157,7 @@ void ComboBox::keyDown(int keyCode, char charecter, Graphics & g)
 		}
 		break;
 	case VK_NUMPAD2:
-		if (currentIndex == vectorSize)
+		if (currentIndex == vectorSize - 1)
 		{
 			currentIndex = 0;
 		}
@@ -166,9 +167,9 @@ void ComboBox::keyDown(int keyCode, char charecter, Graphics & g)
 		}
 		break;
 	case VK_UP:
-		if (currentIndex == 1)
+		if (currentIndex == 0)
 		{
-			currentIndex = vectorSize;
+			currentIndex = vectorSize - 1;
 		}
 		else
 		{
@@ -176,21 +177,21 @@ void ComboBox::keyDown(int keyCode, char charecter, Graphics & g)
 		}
 		break;
 	case VK_NUMPAD8:
-		if (currentIndex == vectorSize)
+		if (currentIndex == 0)
 		{
-			currentIndex = 1;
+			currentIndex = vectorSize - 1;
 		}
 		else
 		{
-			currentIndex++;
+			currentIndex--;
 		}
 		break;
 	case VK_SPACE:
-		values[0] = values[currentIndex];
+		valueToDisplay = values[currentIndex];
 		isOpen = !isOpen;
 		break;
 	case VK_RETURN:
-		values[0] = values[currentIndex];
+		valueToDisplay = values[currentIndex];
 		isOpen = !isOpen;
 		break;
 	}

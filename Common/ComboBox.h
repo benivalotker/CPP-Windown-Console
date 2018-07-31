@@ -4,6 +4,7 @@ class ComboBox :public Control
 {
 private:
 	vector<string> values;
+	string valueToDisplay;
 	bool isOpen;
 	int currentIndex;
 	int width;

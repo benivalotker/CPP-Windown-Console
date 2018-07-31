@@ -23,7 +23,12 @@ int main(int argc, char** argv)
 	//CheckBox cb(2, 2, "ssdf");
 	CheckList cl(new LineBorder() , 2, 2, { "check Box 1" , "check Box 2"  , "check Box 3" ,  "check Box 4" });
 	CheckList cl2(new LineBorder(), 40, 2, { "check Box 1" , "check Box 2"  , "check Box 3" ,  "check Box 4" });
+
+	//radio list
 	RadioList rb(new LineBorder(), 75, 2, { "Radio  Box 1" , "Radio  Box 2"  , "Radio  Box 3" ,  "Radio  Box 4" });
+
+	ComboBox cob(new LineBorder(), 50, 17, { "Combobox 1" , "Combobox 2"  , "Combobox 3" ,  "Combobox 4" });
+
 
 	Panel p(new LineBorder(), 1, 1);
 	
@@ -46,8 +51,7 @@ int main(int argc, char** argv)
 	Button b2(new LineBorder(), 23, 23, "Submit");
 
 	//ComboBox
-	vector < string > val = { "combo1", "combo2", "combo3", "combo5" };
-	ComboBox comBox(new LineBorder(), 60, 17, 15, 10, val);
+	
 
 	//button event
 	b2.setEvent(&mb);
@@ -62,7 +66,7 @@ int main(int argc, char** argv)
 	p.addControlsToVector(&b);
 	p.addControlsToVector(&b2);
 	p.addControlsToVector(&mb);
-	p.addControlsToVector(&comBox);
+	p.addControlsToVector(&cob);
 
 
 	Control* firstFocus;

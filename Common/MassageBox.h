@@ -9,7 +9,7 @@ public:
 	MassageBox(short _left, short _top, string labelString);
 
 	void draw(Graphics& g, int x, int y, size_t z);
-	void mousePressed(int x, int y, bool isLeft);
+	//void mousePressed(int x, int y, bool isLeft);
 	void keyDown(int keyCode, char charecter, Graphics & g) {};
 	bool canGetFocus() { return TRUE; };
 	void onFocus(bool flag);

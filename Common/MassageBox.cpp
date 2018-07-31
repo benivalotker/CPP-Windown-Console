@@ -37,6 +37,8 @@ void MassageBox::draw(Graphics& g, int x, int y, size_t z)
 	p.addControlsToVector(&submit);
 	p.addControlsToVector(&cancel);
 
+	cancel.setEvent(this);
+	submit.setEvent(this);
 
 	if (isVisible) {
 		p.draw(g, x, y, z);
@@ -44,12 +46,12 @@ void MassageBox::draw(Graphics& g, int x, int y, size_t z)
 }
 
 
-void MassageBox::mousePressed(int x, int y, bool isLeft)
-{
+//void MassageBox::mousePressed(int x, int y, bool isLeft)
+/*{
 	OutputDebugString("press");
 	cancel.mousePressed(cancel.getLeft(), cancel.getTop(), isLeft);
 
-}
+}*/
 
 
 void MassageBox::buttonEvent() 

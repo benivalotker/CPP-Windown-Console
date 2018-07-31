@@ -1,27 +1,23 @@
 #pragma once
 #include "Control.h"
-#include "../Common/Border.h"
-#include <iostream>
-
-
-class ComboBox : public Control
+class ComboBox :public Control
 {
-public:
-	ComboBox();
-	ComboBox(Border *_border, short _left, short _top, int _width, int _height, vector < string > val);
-	~ComboBox();
-	void onFocus(bool flag);
-	bool canGetFocus() { return TRUE; };
-	void draw(Graphics& g, int x, int y, size_t z);
-	void keyDown(int keyCode, char charecter, Graphics & g) {};
-	void mousePressed(int x, int y, bool isLeft);
-	int getWidth() { return width; };
-
 private:
-	vector < string > values;
+	vector<string> values;
+	bool isOpen;
+	int currentIndex;
 	int width;
-	int height;
-	int cursor;
-	bool focus;
-	bool isSelected;
+	int selectedIndex;
+public:
+	ComboBox(Border* _border, short _left, short _top, vector<string> _values);
+	void draw(Graphics& g, int x, int y, size_t z);
+	void mousePressed(int x, int y, bool isLeft);
+	void keyDown(int keyCode, char charecter, Graphics & g);
+	bool canGetFocus() { return TRUE; };
+	bool isListObj() { return TRUE; }
+	int getWidth() { return width; };
+	bool getIsInLastChild();
+	void onFocus(bool flag);
+
+	~ComboBox();
 };

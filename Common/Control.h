@@ -18,11 +18,6 @@ protected:
 	Color bgColor;
 	Color fgColor;
 	Border* border;
-	
-	
-
-private:
-	
 
 public:
 	Control();
@@ -70,6 +65,8 @@ public:
 
 	virtual void flipBgToWhite();
 	virtual void flipBgToBlack();
+
+	virtual void buttonEvent() {};
 	~Control();
 };
 

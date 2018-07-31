@@ -20,6 +20,7 @@ void Button::draw(Graphics & g, int x, int y, size_t z)
 
 void Button::mousePressed(int x, int y, bool isLeft)
 {
+	OutputDebugString("press");
 	if (y == top && (x > left && x < (left + static_cast<int>(value.size()) - 1)))
 	{
 		if (!clicked)
@@ -32,13 +33,24 @@ void Button::mousePressed(int x, int y, bool isLeft)
 			this->flipBgToBlack();
 			clicked = FALSE;
 		}
-
-		
 	}
+
+
+	for (int i = 0; i < events.size(); i++) 
+	{
+		events[i]->buttonEvent();
+	}
+	
 }
 
 int Button::getWidth() 
 {
 	return width; 
 };
+
+void Button::setEvent(Control* c)
+{
+	events.push_back(c);
+}
+
 Button::~Button() {}

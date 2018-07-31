@@ -57,6 +57,9 @@
     <ClCompile Include="RadioList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MassageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventEngine.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RadioList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MassageBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

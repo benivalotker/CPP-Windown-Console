@@ -7,7 +7,7 @@
 #include "../Common/NumericBox.h"
 #include "../Common/TextBox.h"
 #include "../Common/RadioList.h"
-
+#include "../Common/MassageBox.h"
 #include <iostream>
 
 using namespace std;
@@ -37,11 +37,15 @@ int main(int argc, char** argv)
 	TextBox textBox(new LineBorder(), 2, 20, 20, 4);
 	TextBox textBox1(new LineBorder(), 23, 20, 20, 4);
 
-	
+	//massageBox
+	MassageBox mb(35, 8, "Massage Box");
 	
 	//button
 	Button b(new LineBorder(), 2, 23, "button");
-	Button b2(new LineBorder(), 23, 23, "button2");
+	Button b2(new LineBorder(), 23, 23, "Submit");
+
+	//button event
+	b2.setEvent(&mb);
 	
 	p.addControlsToVector(&cl);
 	p.addControlsToVector(&cl2);
@@ -52,7 +56,9 @@ int main(int argc, char** argv)
 	p.addControlsToVector(&textBox1);
 	p.addControlsToVector(&b);
 	p.addControlsToVector(&b2);
-	
+	p.addControlsToVector(&mb);
+
+
 	Control* firstFocus;
 	if (firstFocus = p.getFirstControl())
 	{

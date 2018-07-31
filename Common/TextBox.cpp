@@ -29,6 +29,7 @@ void TextBox::draw(Graphics & g, int x, int y, size_t z)
 		g.write(x + 1, y + 1 , value);
 		g.moveTo(cursor + (left + 1), top + 1);
 		g.setCursorVisibility(TRUE);
+		g.write("_");
 	}
 	else
 	{

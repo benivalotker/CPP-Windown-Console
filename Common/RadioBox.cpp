@@ -4,11 +4,13 @@
 using namespace std;
 
 
+//Constructor
 RadioBox::RadioBox(short _left, short _top, string _value) :Control(_left, _top) , value(_value), isSelected(FALSE)
 {
 }
 
 
+//overloads the father method
 void RadioBox::draw(Graphics & g, int x, int y, size_t z)
 {
 	g.moveTo(x, y);
@@ -40,27 +42,33 @@ void RadioBox::draw(Graphics & g, int x, int y, size_t z)
 	g.write(value);
 }
 
+//reacts to mouse press
 void RadioBox::mousePressed(int x, int y, bool isLeft)
 {
 }
 
+//colors current item to white
 void RadioBox::flipBgToWhite()
 {
 	bgColor = Color::White;
 	fgColor = Color::Black;
 }
 
+
+//colors current item to black
 void RadioBox::flipBgToBlack()
 {
 	bgColor = Color::Black;
 	fgColor = Color::White;
 }
 
+//returns true if current item is selected
 bool RadioBox::getIsSelected()
 {
 	return isSelected;
 }
 
+//set focus on curret item
 void RadioBox::setIsSelected()
 {
 	if (!isSelected)
@@ -73,6 +81,7 @@ void RadioBox::setIsSelected()
 	}
 }
 
+//Destructor
 RadioBox::~RadioBox()
 {
 }

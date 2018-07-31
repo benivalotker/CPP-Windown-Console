@@ -4,6 +4,7 @@
 
 class CheckList : public Control
 {
+
 private:
 	vector<CheckBox*> checkBoxs;
 	vector<COORD> checkBoxCoord;
@@ -13,7 +14,6 @@ private:
 
 public:
 	CheckList(Border* border , short _left, short _top, vector<string> _values);
-
 	void draw(Graphics& g, int x, int y, size_t z);
 	void mousePressed(int x, int y, bool isLeft);
 	void keyDown(int keyCode, char charecter , Graphics & g);
@@ -21,8 +21,6 @@ public:
 	bool isListObj() { return TRUE; }
 	bool getIsInLastChild();
 	void onFocus(bool flag);
-	
-
 	~CheckList();
 };
 
